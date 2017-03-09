@@ -14,3 +14,4 @@ class HospitalgeneratorItem(scrapy.Item):
     link = scrapy.Field()
     desc = scrapy.Field()
     postTime = scrapy.Field()
+    msgFrom = scrapy.Field()
