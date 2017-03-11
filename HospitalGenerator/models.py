@@ -85,7 +85,7 @@ class HospitalModel(Model):
             postTime_css = '.artinfo::text',
             msgDesc_css = '.arttitle h1::text',
             msgFrom = u'西安市第四医院',
-            enable = 1
+            enable = 0
         )
         #第四军医大学
         fmmu = Rules(
@@ -102,7 +102,7 @@ class HospitalModel(Model):
             postTime_css = '.news_fabu_title_time::text',
             msgDesc_css = '.news_title::text',
             msgFrom = u'第四军医大学',
-            enable = 1
+            enable = 0
         )
         #陕西省人民医院
         spph = Rules(
@@ -119,7 +119,7 @@ class HospitalModel(Model):
             postTime_css='.liay_con::text',
             msgDesc_css='.nir_con::text',
             msgFrom = u'陕西省人民医院',
-            enable=1
+            enable=0
         )
         #西安市第一医院
         xadyyy = Rules(
@@ -138,7 +138,7 @@ class HospitalModel(Model):
             postTime_css='span',
             msgDesc_css='a::text',
             msgFrom = u'西安市第一医院',
-            enable=1
+            enable=0
         )
         #西安市中医院
         xazyy = Rules(
@@ -157,6 +157,102 @@ class HospitalModel(Model):
             postTime_css='#ContentPlaceHolder1_SubContent_infoinfo::text',
             msgDesc_css='.title::text',
             msgFrom = u'西安市中医院',
+            enable=0
+        )
+        #西北妇女儿童医院
+        #陕西省妇幼保健院
+        nwwch = Rules(
+            name='nwwch',
+            allow_domains='nwwch.com',
+            start_urls='http://nwwch.com/index.php?m=content&c=index&a=lists&catid=19&page=1',
+            allow_url=r'm=content&c=index&a=lists&catid=19&page=\d{1,4}',
+            next_page='',
+            base_url='',
+            extract_from='',
+            loop_css='.ullist li',
+            key_words=r'(\xb2\xc9\xb9\xba\xb9\xab\xb8\xe6)',
+            postTime_pattern=r'(\d{1,4}-\d{1,2}-\d{1,2})',
+            msgTitle_css='title::text',
+            msgLink_css='a::attr(href)',
+            postTime_css='span::text',
+            msgDesc_css='a::attr(title)',
+            msgFrom=u'西北妇女儿童医院(陕西省妇幼保健院)',
+            enable=0
+        )
+
+        #西安交通大学第一附属医院
+        yfyzbb = Rules(
+            name='yfyzbb',
+            allow_domains='jdyfy.com',
+            start_urls='http://yfyzbb.jdyfy.com/zbxx1/zbgg.htm',
+            allow_url=r'info/1025/\d{1,4}\.htm',
+            next_page='//div[@align="center"]',
+            base_url='',
+            extract_from='',
+            loop_css='',
+            key_words=r'(\xd5\xd0\xb1\xea)',
+            postTime_pattern=r'(\d{1,4}-\d{1,2}-\d{1,2})',
+            msgTitle_css='title::text',
+            msgLink_css='',
+            postTime_css='div[align="center"]::text',
+            msgDesc_css='.news::text',
+            msgFrom=u'西安交通大学第一附属医院',
+            enable=0
+        )
+        #西安交通大学第二附属医院
+        x2yuan = Rules(
+            name='x2yuan',
+            allow_domains='2yuan.org',
+            start_urls='http://www.2yuan.org/Html/News/Columns/101/1.html',
+            allow_url=r'Html/News/Columns/101/\d{1,3}\.html',
+            next_page='',
+            base_url='http://www.2yuan.org',
+            extract_from='',
+            loop_css='#zoom li',
+            key_words=r'(\xd5\xd0\xb1\xea)',
+            postTime_pattern=r'(\d{1,4}-\d{1,2}-\d{1,2})',
+            msgTitle_css='title::text',
+            msgLink_css='a::attr(href)',
+            postTime_css='.dy_date::text',
+            msgDesc_css='a::attr(title)',
+            msgFrom=u'西安交通大学第二附属医院',
+            enable=0
+        )
+        #第四军医大学唐都医院
+        tdfmmu = Rules(
+            name='tdfmmu',
+            allow_domains='fmmu.edu.cn',
+            start_urls='http://tdwww.fmmu.edu.cn/9/18(1)/list.aspx',
+            allow_url=r'9/18\(\d{1,3}\)/list\.aspx',
+            next_page='',
+            base_url='http://tdwww.fmmu.edu.cn',
+            extract_from='',
+            loop_css='.Law li',
+            key_words=r'(\xd5\xd0\xb1\xea|\xb2\xc9\xb9\xba)',
+            postTime_pattern=r'(\d{1,4}-\d{1,2}-\d{1,2})',
+            msgTitle_css='title::text',
+            msgLink_css='a::attr(href)',
+            postTime_css='span::text',
+            msgDesc_css='a::attr(title)',
+            msgFrom=u'第四军医大学唐都医院',
+            enable=0
+        )
+        kqfmmu = Rules(
+            name='kqfmmu',
+            allow_domains='fmmu.edu.cn',
+            start_urls='http://kqwww.fmmu.edu.cn/info/iList.jsp?cat_id=10003&cur_page=1',
+            allow_url=r'info/iList\.jsp\?cat_id=10003&cur_page=\d{1,3}',
+            next_page='',
+            base_url='http://kqwww.fmmu.edu.cn',
+            extract_from='',
+            loop_css='.list_con_box li',
+            key_words=r'(\xd5\xd0\xb1\xea|\xb2\xc9\xb9\xba|\xb9\xab\xb8\xe6)',
+            postTime_pattern=r'(\d{1,4}-\d{1,2}-\d{1,2})',
+            msgTitle_css='title::text',
+            msgLink_css='a::attr(href)',
+            postTime_css='.time::text',
+            msgDesc_css='a::attr(title)',
+            msgFrom=u'第四军医大学口腔医院',
             enable=1
         )
 
@@ -165,6 +261,11 @@ class HospitalModel(Model):
         self.session.add(spph)
         self.session.add(xadyyy)
         self.session.add(xazyy)
+        self.session.add(nwwch)
+        self.session.add(yfyzbb)
+        self.session.add(x2yuan)
+        self.session.add(tdfmmu)
+        self.session.add(kqfmmu)
         self.session.commit()
 
 if __name__ == '__main__':

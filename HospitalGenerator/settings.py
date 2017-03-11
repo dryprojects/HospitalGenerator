@@ -92,7 +92,7 @@ import logging
 LOG_FILE = 'hospital.log'
 LOG_ENABLE = True
 LOG_LEVEL = logging.INFO
-MYSQL_HOST = '192.168.108.134'
+MYSQL_HOST = '192.168.1.102'
 MYSQL_DBNAME = 'bids'
 MYSQL_USER = 'jennei'
 MYSQL_PASSWORD = '007'
