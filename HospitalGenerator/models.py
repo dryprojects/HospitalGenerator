@@ -253,9 +253,46 @@ class HospitalModel(Model):
             postTime_css='.time::text',
             msgDesc_css='a::attr(title)',
             msgFrom=u'第四军医大学口腔医院',
-            enable=1
+            enable=0
         )
-
+        xaszxyy = Rules(
+            name='xaszxyy',
+            allow_domains='xaszxyy.com',
+            start_urls='http://www.xaszxyy.com/2/15(1)/list.aspx',
+            allow_url=r'2/15\(\d+\)/list.aspx',
+            next_page='',
+            base_url='http://www.xaszxyy.com',
+            extract_from='',
+            loop_css='.news_new li',
+            key_words=r'(\xd5\xd0\xb1\xea)',
+            postTime_pattern=r'(\d{1,4}-\d{1,2}-\d{1,2})',
+            msgTitle_css='title::text',
+            msgLink_css='a::attr(href)',
+            postTime_css='.fr::text',
+            msgDesc_css='a::text',
+            msgFrom=u'西安市中心医院',
+            enable=0
+        )
+        hzcch = Rules(
+            name='hzcch',
+            allow_domains='hzcch.com',
+            start_urls='http://www.hzcch.com/gsgg/gsgg1.htm',
+            allow_url=r'info/1064/\d+\.htm',
+            next_page='//div[@align="center"]',
+            base_url='',
+            extract_from='',
+            loop_css='',
+            key_words=r'(\xd5\xd0\xb1\xea)',
+            postTime_pattern=r'(\d{1,4}-\d{1,2}-\d{1,2})',
+            msgTitle_css='title::text',
+            msgLink_css='',
+            postTime_css='div[align="center"]::text',
+            msgDesc_css='h1::text',
+            msgFrom=u'汉中市中心医院',
+            enable=0
+        )
+        self.session.add(hzcch)
+        self.session.add(xaszxyy)
         self.session.add(r4thofxian)
         self.session.add(fmmu)
         self.session.add(spph)
@@ -266,6 +303,7 @@ class HospitalModel(Model):
         self.session.add(x2yuan)
         self.session.add(tdfmmu)
         self.session.add(kqfmmu)
+
         self.session.commit()
 
 if __name__ == '__main__':
