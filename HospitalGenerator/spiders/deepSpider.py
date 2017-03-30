@@ -90,7 +90,8 @@ class DeepSpider(CrawlSpider):
                 item = HI()
                 item['title'] = response.css(self.rule.msgTitle_css)[0].extract().encode('gbk', 'ignore')
                 item['desc'] = sel.css(self.rule.msgDesc_css)[0].extract().encode('gbk', 'ignore')
-                item['link'] = self.rule.base_url + sel.css(self.rule.msgLink_css)[0].extract().encode('gbk', 'ignore')
+                link = sel.css(self.rule.msgLink_css)[0].extract().encode('gbk', 'ignore')
+                item['link'] = self.rule.base_url + link.lstrip()
                 item['postTime'] = sel.css(self.rule.postTime_css)[0].extract().encode('gbk', 'ignore')
                 item['msgFrom'] = self.rule.msgFrom.encode('gbk', 'ignore')
                 yield item

@@ -291,6 +291,253 @@ class HospitalModel(Model):
             msgFrom=u'汉中市中心医院',
             enable=0
         )
+        wnszxyy = Rules(
+            name='wnszxyy',
+            allow_domains='wnszxyy.com',
+            start_urls='http://www.wnszxyy.com/subpage.asp?id=41&xid=0&page=1',
+            allow_url=r'subpage\.asp\?id=41&xid=0&page=\d+',
+            next_page='',
+            base_url='http://www.wnszxyy.com',
+            extract_from='',
+            loop_css='.showcontent li',
+            key_words=r'(\xb9\xab\xb8\xe6|\xb9\xab\xca\xbe)',
+            postTime_pattern=r'(\d{1,4}-\d{1,2}-\d{1,2})',
+            msgTitle_css='title::text',
+            msgLink_css='a::attr(href)',
+            postTime_css='span::text',
+            msgDesc_css='a::text',
+            msgFrom=u'渭南市中心医院',
+            enable=0
+        )
+        bjzxyy = Rules(
+            name='bjzxyy',
+            allow_domains='bjzxyy.com',
+            start_urls='http://www.bjzxyy.com/news/class/?53.html&page=1&showtj=&showhot=&author=&key=',
+            allow_url=r'news/html/\?\d+\.html',
+            next_page='//DIV[@class="daye_right_2_3_b"]',
+            base_url='',
+            extract_from='',
+            loop_css='',
+            key_words=r'(\xd5\xd0\xb1\xea|\xb2\xc9\xb9\xba|\xe5\xe0\xd1\xa1)',
+            postTime_pattern=r'(\d{1,4}-\d{1,2}-\d{1,2})',
+            msgTitle_css='title::text',
+            msgLink_css='',
+            postTime_css='.daye_right_2_2::text',
+            msgDesc_css='.daye_right_2_1::text',
+            msgFrom=u'宝鸡市中心医院',
+            enable=0
+        )
+        wjyy029 = Rules(
+            name='wjyy029',
+            allow_domains='wjyy029.com',
+            start_urls='http://www.wjyy029.com/ColumnPage.aspx?categoryid=54',
+            allow_url=r'ColumnPage\.aspx\?categoryid=54',
+            next_page='',
+            base_url='http://www.wjyy029.com',
+            extract_from='',
+            loop_css='.list-unstyledl li',
+            key_words=r'(\xd5\xd0\xb1\xea)',
+            postTime_pattern=r'(\d{1,4}-\d{1,2}-\d{1,2})',
+            msgTitle_css='title::text',
+            msgLink_css='a::attr(href)',
+            postTime_css='a div:nth-child(2)::text',
+            msgDesc_css='a div::text',
+            msgFrom=u'武警陕西省总队医院',
+            enable=0
+        )#现在只能抓取武警医院的第一页
+        zyhos = Rules(
+            name='zyhos',
+            allow_domains='zyhos.com',
+            start_urls='http://www.zyhos.com/news/index.asp?D_CataID=I0003&pageno=1',
+            allow_url=r'news/index\.asp\?D_CataID=I0003&pageno=\d+',
+            next_page='',
+            base_url='http://www.zyhos.com/news/',
+            extract_from='',
+            loop_css='.xuxian',
+            key_words=r'(\xd5\xd0\xb1\xea)',
+            postTime_pattern=r'(\d{1,4}-\d{1,2}-\d{1,2})',
+            msgTitle_css='title::text',
+            msgLink_css='a::attr(href)',
+            postTime_css='td:nth-child(2)::text',
+            msgDesc_css='a::attr(title)',
+            msgFrom=u'陕西中医药大学第二附属医院',
+            enable=0
+        )
+        xy120 = Rules(
+            name='xy120',
+            allow_domains='xy120.net',
+            start_urls='http://www.xy120.net/news/notice.htm',
+            allow_url=r'info/1162/\d+\.htm',
+            next_page='//div[@class="page-bar"]',
+            base_url='',
+            extract_from='',
+            loop_css='',
+            key_words=r'(\xb9\xab\xb8\xe6|\xb9\xab\xca\xbe|\xd5\xd0\xb1\xea)',
+            postTime_pattern=r'(\d{1,4}.*?\d{1,2}.*?\d{1,2})',
+            msgTitle_css='title::text',
+            msgLink_css='',
+            postTime_css='.view-param::text',
+            msgDesc_css='.view-title::text',
+            msgFrom=u'咸阳市中心医院',
+            enable=0
+        )
+        xadwyy = Rules(
+            name='xadwyy',
+            allow_domains='xadwyy.com',
+            start_urls='http://www.xadwyy.com/index.php?m=content&c=index&a=lists&catid=376&page=1',
+            allow_url=r'index\.php\?m=content&c=index&a=lists&catid=376&page=\d+',
+            next_page='',
+            base_url='',
+            extract_from='',
+            loop_css='.content li',
+            key_words=r'(\xb9\xab\xb8\xe6|\xb9\xab\xca\xbe|\xd5\xd0\xb1\xea)',
+            postTime_pattern=r'(\d{1,4}-\d{1,2}-\d{1,2})',
+            msgTitle_css='title::text',
+            msgLink_css='a::attr(href)',
+            postTime_css='span::text',
+            msgDesc_css='a::text',
+            msgFrom=u'西安市第五医院',
+            enable=0
+        )
+        xa8yuan = Rules(
+            name='xa8yuan',
+            allow_domains='xa8yuan.com',
+            start_urls='http://www.xa8yuan.com/xxgk/list.asp?classid=52&order=0&page=1',
+            allow_url=r'xxgk/list\.asp\?classid=52&order=0&page=\d+',
+            next_page='',
+            base_url='http://www.xa8yuan.com/xxgk/',
+            extract_from='',
+            loop_css='#listbox li',
+            key_words=r'(\xb9\xab\xb8\xe6|\xb9\xab\xca\xbe|\xd5\xd0\xb1\xea)',
+            postTime_pattern=r'(\d{1,4}-\d{1,2}-\d{1,2})',
+            msgTitle_css='title::text',
+            msgLink_css='a::attr(href)',
+            postTime_css='em::text',
+            msgDesc_css='a::text',
+            msgFrom=u'西安市第五医院',
+            enable=0
+        )
+        yl2y = Rules(
+            name='yl2y',
+            allow_domains='yl2y.com',
+            start_urls='http://www.yl2y.com/dtxx/gonggao/',
+            allow_url=r'dtxx/gonggao/\d+\.html',
+            next_page='//div[@class="fenye"]',
+            base_url='',
+            extract_from='',
+            loop_css='',
+            key_words=r'(\xb9\xab\xb8\xe6|\xb9\xab\xca\xbe|\xd5\xd0\xb1\xea)',
+            postTime_pattern=r'(\d{1,4}-\d{1,2}-\d{1,2})',
+            msgTitle_css='title::text',
+            msgLink_css='',
+            postTime_css='.dgzr_wenzhang div:nth-child(2)::text',
+            msgDesc_css='.dgzr_wenzhang div:nth-child(1)::text',
+            msgFrom=u'榆林市第二医院',
+            enable=0
+        )
+        hz3201 = Rules(
+            name='hz3201',
+            allow_domains='hz3201.com',
+            start_urls='http://www.hz3201.com/news.php?cid=35&page=1',
+            allow_url=r'news\.php\?cid=35&page=\d+',
+            next_page='',
+            base_url='http://www.hz3201.com/',
+            extract_from='',
+            loop_css='.news_list2 li',
+            key_words=r'(\xb9\xab\xb8\xe6|\xb9\xab\xca\xbe|\xd5\xd0\xb1\xea|\xe5\xe0\xd1\xa1)',
+            postTime_pattern=r'(\d{1,4}-\d{1,2}-\d{1,2})',
+            msgTitle_css='title::text',
+            msgLink_css='a::attr(href)',
+            postTime_css='.time::text',
+            msgDesc_css='a::text',
+            msgFrom=u'汉中3201医院',
+            enable=0
+        )
+        ylsdyyy = Rules(
+            name='ylsdyyy',
+            allow_domains='ylsdyyy.com',
+            start_urls='http://www.ylsdyyy.com/index.php?m=Index&a=newsList&typeid=8&p=1',
+            allow_url=r'index\.php\?m=Index&a=newsList&typeid=8&p=\d+',
+            next_page='',
+            base_url='http://www.ylsdyyy.com',
+            extract_from='',
+            loop_css='.news_nr li',
+            key_words=r'(\xb9\xab\xb8\xe6|\xb9\xab\xca\xbe|\xd5\xd0\xb1\xea|\xe5\xe0\xd1\xa1)',
+            postTime_pattern=r'(\d{1,4}-\d{1,2}-\d{1,2})',
+            msgTitle_css='title::text',
+            msgLink_css='a::attr(href)',
+            postTime_css='span::text',
+            msgDesc_css='a::text',
+            msgFrom=u'榆林市第一医院',
+            enable=0
+        )
+        dentalxjtu = Rules(
+            name='dentalxjtu',
+            allow_domains='dentalxjtu.com',
+            start_urls='http://www.dentalxjtu.com/news.php?hcateid=111&cateid=11119&page=1',
+            allow_url=r'news\.php\?hcateid=111&cateid=11119&page=\d+',
+            next_page='',
+            base_url='http://www.dentalxjtu.com/',
+            extract_from='',
+            loop_css='.news_list li',
+            key_words=r'(\xb9\xab\xb8\xe6|\xb9\xab\xca\xbe|\xd5\xd0\xb1\xea|\xe5\xe0\xd1\xa1)',
+            postTime_pattern=r'(\d{1,4}-\d{1,2}-\d{1,2})',
+            msgTitle_css='title::text',
+            msgLink_css='a::attr(href)',
+            postTime_css='.n_time::text',
+            msgDesc_css='a::text',
+            msgFrom=u'西安交通大学口腔医院',
+            enable=0
+        )
+        sxcahosp = Rules(
+            name='sxcahosp',
+            allow_domains='sxcahosp.com',
+            start_urls='http://www.sxcahosp.com/newslist.aspx?sid=46',
+            allow_url=r'newslist\.aspx\?sid=46',
+            next_page='',
+            base_url='http://www.sxcahosp.com/',
+            extract_from='',
+            loop_css='.newslist li',
+            key_words=r'(\xb9\xab\xb8\xe6|\xb9\xab\xca\xbe|\xd5\xd0\xb1\xea|\xe5\xe0\xd1\xa1)',
+            postTime_pattern=r'(\d{1,4}-\d{1,2}-\d{1,2})',
+            msgTitle_css='title::text',
+            msgLink_css='.a::attr(href)',
+            postTime_css='.time::text',
+            msgDesc_css='.a::text',
+            msgFrom=u'陕西省肿瘤医院',
+            enable=0
+        )#只能抓取第一页
+        xtzxyy = Rules(
+            name='xtzxyy',
+            allow_domains='xtzxyy.com',
+            start_urls='http://www.xtzxyy.com/cn/list.aspx?c=314&p=1',
+            allow_url=r'cn/list\.aspx\?c=314&p=\d+',
+            next_page='',
+            base_url='http://www.xtzxyy.com/cn/',
+            extract_from='',
+            loop_css='#ctl00_MainContent_Controllist1_dlTW li',
+            key_words=r'(\xb9\xab\xb8\xe6|\xb9\xab\xca\xbe|\xd5\xd0\xb1\xea|\xe5\xe0\xd1\xa1)',
+            postTime_pattern=r'(\d{1,4}-\d{1,2}-\d{1,2})',
+            msgTitle_css='title::text',
+            msgLink_css='a::attr(href)',
+            postTime_css='.time::text',
+            msgDesc_css='a::attr(title)',
+            msgFrom=u'西安市第九医院',
+            enable=0
+        )
+        self.session.add(xtzxyy)
+        self.session.add(sxcahosp)
+        self.session.add(dentalxjtu)
+        self.session.add(ylsdyyy)
+        self.session.add(hz3201)
+        self.session.add(yl2y)
+        self.session.add(xa8yuan)
+        self.session.add(xadwyy)
+        self.session.add(xy120)
+        self.session.add(zyhos)
+        self.session.add(wjyy029)
+        self.session.add(bjzxyy)
+        self.session.add(wnszxyy)
         self.session.add(hzcch)
         self.session.add(xaszxyy)
         self.session.add(r4thofxian)

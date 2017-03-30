@@ -56,6 +56,7 @@ class CleanedData(object):
         #如果有汉字 年， 月 或者'/'则把汉字首先转换成 '-'
         time, n = re.subn(r'\xc4\xea|\xd4\xc2|/', '-', time)
         time = re.sub(r'\xc8\xd5', '', time)
+        time = re.sub(r'\s+', '', time)
 
         #去掉时间，只留日期
         time = time.split(' ')[0]
