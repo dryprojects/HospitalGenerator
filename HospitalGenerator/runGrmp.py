@@ -18,15 +18,19 @@ from models import Rules
 from scrapy.crawler import CrawlerProcess
 from scrapy.utils.project import get_project_settings
 
-process = CrawlerProcess(get_project_settings())
+import logging
+try:
+    process = CrawlerProcess(get_project_settings())
 
-#1.初始化数据库连接池
-hospital = HospitalModel()
-#2.查询爬虫需要的爬取规则
-rules = hospital.session.query(Rules).filter(Rules.enable == 1)
-#3.根据爬虫规则分别制定不同的爬虫线程
-for rule in rules:
-    #非阻塞 twisted defer
-    process.crawl(DeepSpider, rule)
-#4.主进程启动（阻塞）
-process.start()
+    # 1.初始化数据库连接池
+    hospital = HospitalModel()
+    # 2.查询爬虫需要的爬取规则
+    rules = hospital.session.query(Rules).filter(Rules.enable == 1)
+    # 3.根据爬虫规则分别制定不同的爬虫线程
+    for rule in rules:
+        # 非阻塞 twisted defer
+        process.crawl(DeepSpider, rule)
+    # 4.主进程启动（阻塞）
+    process.start()
+except:
+    logging.error("未知异常，默认不处理")

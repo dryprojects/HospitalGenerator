@@ -63,7 +63,10 @@ class DeepSpider(CrawlSpider):
                 item['msgFrom'] = self.rule.msgFrom.encode('gbk', 'ignore')
                 yield item
             except IndexError:
-                logging.error(u'内容不存在 %s' % response.url)
+                try:
+                    logging.error(u'内容不存在 %s' % response.url)
+                except:
+                    logging.error(u'未知异常')
                 yield HI()
         else:
             try:
@@ -76,7 +79,10 @@ class DeepSpider(CrawlSpider):
                     item['msgFrom'] = self.rule.msgFrom.encode('gbk', 'ignore')
                     yield item
             except IndexError:
-                logging.error(u'内容不存在 %s' % response.url)
+                try:
+                    logging.error(u'内容不存在 %s' % response.url)
+                except:
+                    logging.error(u'未知异常')
                 yield HI()
 
     def parse_item_normal(self, response):
@@ -96,7 +102,10 @@ class DeepSpider(CrawlSpider):
                 item['msgFrom'] = self.rule.msgFrom.encode('gbk', 'ignore')
                 yield item
             except IndexError:
-                logging.error(u'内容不存在 %s' % response.url)
+                try:
+                    logging.error(u'内容不存在 %s' % response.url)
+                except:
+                    logging.error(u'未知异常')
                 yield HI()
         else:
             try:
@@ -110,5 +119,8 @@ class DeepSpider(CrawlSpider):
                     item['msgFrom'] = self.rule.msgFrom.encode('gbk', 'ignore')
                     yield item
             except IndexError, e:
-                logging.error(u'内容不存在 %s' % (self.rule.base_url + response.url))
+                try:
+                    logging.error(u'内容不存在 %s' % (self.rule.base_url + response.url))
+                except:
+                    logging.error(u'未知异常')
                 yield HI()

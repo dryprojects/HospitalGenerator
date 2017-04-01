@@ -85,8 +85,8 @@ class HospitalModel(Model):
             postTime_css = '.artinfo::text',
             msgDesc_css = '.arttitle h1::text',
             msgFrom = u'西安市第四医院',
-            enable = 0
-        )
+            enable = 1
+        )#网站暂时访问不了，未备案
         #第四军医大学
         fmmu = Rules(
             name = 'fmmu',
@@ -97,12 +97,12 @@ class HospitalModel(Model):
             extract_from = '',
             loop_css = '.content',
             key_words = r'(\xd5\xd0\xb1\xea|\xd2\xbd\xd4\xba|\xb2\xc9\xb9\xba)',
-            postTime_pattern = r'(\d{1,4}.+\d{1,2}.+\d{1,2}.+\s*\d{1,2}:\d{1,2})',
+            postTime_pattern = r'(\d{4}\xc4\xea\d{2}\xd4\xc2\d{2})',
             msgTitle_css = 'title::text',
             postTime_css = '.news_fabu_title_time::text',
             msgDesc_css = '.news_title::text',
             msgFrom = u'第四军医大学',
-            enable = 0
+            enable = 1
         )
         #陕西省人民医院
         spph = Rules(
@@ -114,12 +114,12 @@ class HospitalModel(Model):
             extract_from='',
             loop_css='.wen_contt',
             key_words=r'(\xd5\xd0\xc6\xb8|\xd2\xe9\xb1\xea)',
-            postTime_pattern=r'(\d{1,4}-\d{1,2}-\d{1,2}\s+\d{1,2}:\d{1,2}:\d{1,2})',
+            postTime_pattern=r'(\d{4}-\d{2}-\d{2})',
             msgTitle_css='title::text',
             postTime_css='.liay_con::text',
             msgDesc_css='.nir_con::text',
             msgFrom = u'陕西省人民医院',
-            enable=0
+            enable=1
         )
         #西安市第一医院
         xadyyy = Rules(
@@ -138,7 +138,7 @@ class HospitalModel(Model):
             postTime_css='span',
             msgDesc_css='a::text',
             msgFrom = u'西安市第一医院',
-            enable=0
+            enable=1
         )
         #西安市中医院
         xazyy = Rules(
@@ -151,13 +151,13 @@ class HospitalModel(Model):
             extract_from='',
             loop_css='',
             key_words=r'(\xd5\xd0\xb1\xea)',
-            postTime_pattern=r'(\d{1,2}/\d{1,2}/\d{1,4}\s\d{1,2}:\d{1,2}:\d{1,2})',
+            postTime_pattern=r'(\d{1,4}/\d{1,2}/\d{1,4})',
             msgTitle_css='title::text',
             msgLink_css='a::attr(href)',
             postTime_css='#ContentPlaceHolder1_SubContent_infoinfo::text',
             msgDesc_css='.title::text',
             msgFrom = u'西安市中医院',
-            enable=0
+            enable=1
         )
         #西北妇女儿童医院
         #陕西省妇幼保健院
@@ -177,7 +177,7 @@ class HospitalModel(Model):
             postTime_css='span::text',
             msgDesc_css='a::attr(title)',
             msgFrom=u'西北妇女儿童医院(陕西省妇幼保健院)',
-            enable=0
+            enable=1
         )
 
         #西安交通大学第一附属医院
@@ -197,7 +197,7 @@ class HospitalModel(Model):
             postTime_css='div[align="center"]::text',
             msgDesc_css='.news::text',
             msgFrom=u'西安交通大学第一附属医院',
-            enable=0
+            enable=1
         )
         #西安交通大学第二附属医院
         x2yuan = Rules(
@@ -216,7 +216,7 @@ class HospitalModel(Model):
             postTime_css='.dy_date::text',
             msgDesc_css='a::attr(title)',
             msgFrom=u'西安交通大学第二附属医院',
-            enable=0
+            enable=1
         )
         #第四军医大学唐都医院
         tdfmmu = Rules(
@@ -235,7 +235,7 @@ class HospitalModel(Model):
             postTime_css='span::text',
             msgDesc_css='a::attr(title)',
             msgFrom=u'第四军医大学唐都医院',
-            enable=0
+            enable=1
         )
         kqfmmu = Rules(
             name='kqfmmu',
@@ -253,7 +253,7 @@ class HospitalModel(Model):
             postTime_css='.time::text',
             msgDesc_css='a::attr(title)',
             msgFrom=u'第四军医大学口腔医院',
-            enable=0
+            enable=1
         )
         xaszxyy = Rules(
             name='xaszxyy',
@@ -271,7 +271,7 @@ class HospitalModel(Model):
             postTime_css='.fr::text',
             msgDesc_css='a::text',
             msgFrom=u'西安市中心医院',
-            enable=0
+            enable=1
         )
         hzcch = Rules(
             name='hzcch',
@@ -289,7 +289,7 @@ class HospitalModel(Model):
             postTime_css='div[align="center"]::text',
             msgDesc_css='h1::text',
             msgFrom=u'汉中市中心医院',
-            enable=0
+            enable=1
         )
         wnszxyy = Rules(
             name='wnszxyy',
@@ -307,7 +307,7 @@ class HospitalModel(Model):
             postTime_css='span::text',
             msgDesc_css='a::text',
             msgFrom=u'渭南市中心医院',
-            enable=0
+            enable=1
         )
         bjzxyy = Rules(
             name='bjzxyy',
@@ -325,7 +325,7 @@ class HospitalModel(Model):
             postTime_css='.daye_right_2_2::text',
             msgDesc_css='.daye_right_2_1::text',
             msgFrom=u'宝鸡市中心医院',
-            enable=0
+            enable=1
         )
         wjyy029 = Rules(
             name='wjyy029',
@@ -343,7 +343,7 @@ class HospitalModel(Model):
             postTime_css='a div:nth-child(2)::text',
             msgDesc_css='a div::text',
             msgFrom=u'武警陕西省总队医院',
-            enable=0
+            enable=1
         )#现在只能抓取武警医院的第一页
         zyhos = Rules(
             name='zyhos',
@@ -361,7 +361,7 @@ class HospitalModel(Model):
             postTime_css='td:nth-child(2)::text',
             msgDesc_css='a::attr(title)',
             msgFrom=u'陕西中医药大学第二附属医院',
-            enable=0
+            enable=1
         )
         xy120 = Rules(
             name='xy120',
@@ -379,7 +379,7 @@ class HospitalModel(Model):
             postTime_css='.view-param::text',
             msgDesc_css='.view-title::text',
             msgFrom=u'咸阳市中心医院',
-            enable=0
+            enable=1
         )
         xadwyy = Rules(
             name='xadwyy',
@@ -397,7 +397,7 @@ class HospitalModel(Model):
             postTime_css='span::text',
             msgDesc_css='a::text',
             msgFrom=u'西安市第五医院',
-            enable=0
+            enable=1
         )
         xa8yuan = Rules(
             name='xa8yuan',
@@ -415,8 +415,8 @@ class HospitalModel(Model):
             postTime_css='em::text',
             msgDesc_css='a::text',
             msgFrom=u'西安市第五医院',
-            enable=0
-        )
+            enable=1
+        )#网站访问不了
         yl2y = Rules(
             name='yl2y',
             allow_domains='yl2y.com',
@@ -433,7 +433,7 @@ class HospitalModel(Model):
             postTime_css='.dgzr_wenzhang div:nth-child(2)::text',
             msgDesc_css='.dgzr_wenzhang div:nth-child(1)::text',
             msgFrom=u'榆林市第二医院',
-            enable=0
+            enable=1
         )
         hz3201 = Rules(
             name='hz3201',
@@ -451,7 +451,7 @@ class HospitalModel(Model):
             postTime_css='.time::text',
             msgDesc_css='a::text',
             msgFrom=u'汉中3201医院',
-            enable=0
+            enable=1
         )
         ylsdyyy = Rules(
             name='ylsdyyy',
@@ -469,7 +469,7 @@ class HospitalModel(Model):
             postTime_css='span::text',
             msgDesc_css='a::text',
             msgFrom=u'榆林市第一医院',
-            enable=0
+            enable=1
         )
         dentalxjtu = Rules(
             name='dentalxjtu',
@@ -487,7 +487,7 @@ class HospitalModel(Model):
             postTime_css='.n_time::text',
             msgDesc_css='a::text',
             msgFrom=u'西安交通大学口腔医院',
-            enable=0
+            enable=1
         )
         sxcahosp = Rules(
             name='sxcahosp',
@@ -505,7 +505,7 @@ class HospitalModel(Model):
             postTime_css='.time::text',
             msgDesc_css='.a::text',
             msgFrom=u'陕西省肿瘤医院',
-            enable=0
+            enable=1
         )#只能抓取第一页
         xtzxyy = Rules(
             name='xtzxyy',
@@ -523,7 +523,7 @@ class HospitalModel(Model):
             postTime_css='.time::text',
             msgDesc_css='a::attr(title)',
             msgFrom=u'西安市第九医院',
-            enable=0
+            enable=1
         )
         xahhyy = Rules(
             name='xahhyy',
@@ -541,7 +541,7 @@ class HospitalModel(Model):
             postTime_css='.title3::text',
             msgDesc_css='.title2::text',
             msgFrom=u'西安市红十字会医院',
-            enable=0
+            enable=1
         )
         xajwzx = Rules(
             name='xajwzx',
@@ -559,7 +559,7 @@ class HospitalModel(Model):
             postTime_css='span::text',
             msgDesc_css='a::text',
             msgFrom=u'西安市精神卫生中心',
-            enable=0
+            enable=1
         )
         xaxkyy = Rules(
             name='xaxkyy',
@@ -577,7 +577,7 @@ class HospitalModel(Model):
             postTime_css='span::text',
             msgDesc_css='a::text',
             msgFrom=u'西安市胸科医院',
-            enable=0
+            enable=1
         )
         bjszyy = Rules(
             name='bjszyy',
@@ -595,7 +595,7 @@ class HospitalModel(Model):
             postTime_css='span::text',
             msgDesc_css='a::text',
             msgFrom=u'宝鸡市中医院',
-            enable=0
+            enable=1
         )
         yasrmyy = Rules(
             name='yasrmyy',
@@ -613,7 +613,7 @@ class HospitalModel(Model):
             postTime_css='span::text',
             msgDesc_css='a::text',
             msgFrom=u'延安市人民医院',
-            enable=0
+            enable=1
         )
         ylzyy = Rules(
             name='ylzyy',
@@ -631,7 +631,7 @@ class HospitalModel(Model):
             postTime_css='#div1::text',
             msgDesc_css='.detail_title::text',
             msgFrom=u'榆林市中医医院',
-            enable=0
+            enable=1
         )#该医院采集时间较长
         akzxyy = Rules(
             name='akzxyy',
@@ -649,7 +649,7 @@ class HospitalModel(Model):
             postTime_css='td:nth-child(3)::text',
             msgDesc_css='a::text',
             msgFrom=u'安康市中心医院',
-            enable=0
+            enable=1
         )
         #table:nth-child(7) td:nth-child(2) table:nth-child(3) tr
         xdjtyy = Rules(
@@ -669,7 +669,26 @@ class HospitalModel(Model):
             msgDesc_css='a::text',
             msgFrom=u'西电集团医院',
             enable=1
+        )#暂时未实现抓取
+        xiyi = Rules(
+            name='xiyi',
+            allow_domains='xiyi.edu.cn',
+            start_urls='http://www.xiyi.edu.cn/info/iList.jsp?cat_id=10198&cur_page=1',
+            allow_url=r'info/iList\.jsp\?cat_id=10198&cur_page=\d+',
+            next_page='',
+            base_url='http://www.xiyi.edu.cn',
+            extract_from='',
+            loop_css='.commonList_dot2 li',
+            key_words=r'(\xb2\xc9\xb9\xba|\xb9\xab\xb8\xe6|\xb9\xab\xca\xbe|\xd5\xd0\xb1\xea|\xe5\xe0\xd1\xa1)',
+            postTime_pattern=r'(\d{1,4}-\d{1,2}-\d{1,2})',
+            msgTitle_css='title::text',
+            msgLink_css='a::attr(href)',
+            postTime_css='span::text',
+            msgDesc_css='a::attr(title)',
+            msgFrom=u'西安医学院',
+            enable=1
         )
+        self.session.add(xiyi)
         self.session.add(xdjtyy)
         self.session.add(akzxyy)
         self.session.add(ylzyy)
