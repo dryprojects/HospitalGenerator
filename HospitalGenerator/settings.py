@@ -88,11 +88,11 @@ ITEM_PIPELINES = {
 #HTTPCACHE_DIR = 'httpcache'
 #HTTPCACHE_IGNORE_HTTP_CODES = []
 #HTTPCACHE_STORAGE = 'scrapy.extensions.httpcache.FilesystemCacheStorage'
-import logging
+
 LOG_FILE = 'hospital.log'
 LOG_ENABLE = True
-LOG_LEVEL = logging.INFO
-MYSQL_HOST = '192.168.108.244'
+LOG_LEVEL = 20
+MYSQL_HOST = '192.168.1.111'
 MYSQL_DBNAME = 'bids'
-MYSQL_USER = 'root'
-MYSQL_PASSWORD = 'root'
+MYSQL_USER = 'jennei'
+MYSQL_PASSWORD = '007'

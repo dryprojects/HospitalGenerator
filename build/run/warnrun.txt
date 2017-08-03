@@ -1,0 +1,98 @@
+missing module named 'win32com.gen_py' - imported by win32com, c:\cocosenv\python27\lib\site-packages\PyInstaller\loader\rthooks\pyi_rth_win32comgenpy.py
+missing module named pyimod03_importers - imported by c:\cocosenv\python27\lib\site-packages\PyInstaller\loader\rthooks\pyi_rth_pkgres.py
+missing module named posix - imported by os, C:\Users\Jenne\Documents\GitHub\HospitalGenerator\HospitalGenerator\run.py
+missing module named macresource - imported by MacOS, C:\Users\Jenne\Documents\GitHub\HospitalGenerator\HospitalGenerator\run.py
+missing module named MacOS - imported by platform, C:\Users\Jenne\Documents\GitHub\HospitalGenerator\HospitalGenerator\run.py
+missing module named _datetime - imported by future.backports.datetime, C:\Users\Jenne\Documents\GitHub\HospitalGenerator\HospitalGenerator\run.py
+missing module named _pybsddb - imported by bsddb, bsddb.db, C:\Users\Jenne\Documents\GitHub\HospitalGenerator\HospitalGenerator\run.py
+missing module named bsddb3 - imported by bsddb, C:\Users\Jenne\Documents\GitHub\HospitalGenerator\HospitalGenerator\run.py
+missing module named 'six.moves.urllib_parse' - imported by 'six.moves.urllib_parse', C:\Users\Jenne\Documents\GitHub\HospitalGenerator\HospitalGenerator\run.py
+missing module named 'six.moves.urllib' - imported by 'six.moves.urllib', C:\Users\Jenne\Documents\GitHub\HospitalGenerator\HospitalGenerator\run.py
+missing module named _xmlrpclib - imported by xmlrpclib, C:\Users\Jenne\Documents\GitHub\HospitalGenerator\HospitalGenerator\run.py
+missing module named botocore - imported by scrapy.utils.boto, C:\Users\Jenne\Documents\GitHub\HospitalGenerator\HospitalGenerator\run.py
+missing module named 'botocore.session' - imported by scrapy.extensions.feedexport, C:\Users\Jenne\Documents\GitHub\HospitalGenerator\HospitalGenerator\run.py
+missing module named boto - imported by scrapy.utils.boto, scrapy.extensions.feedexport, C:\Users\Jenne\Documents\GitHub\HospitalGenerator\HospitalGenerator\run.py
+missing module named guppy - imported by scrapy.extensions.telnet, C:\Users\Jenne\Documents\GitHub\HospitalGenerator\HospitalGenerator\run.py
+missing module named 'urllib.parse' - imported by twisted.python.compat, w3lib.url, lxml.html, twisted.web.http, twisted.web.client, twisted.python._url, twisted.web.server, sqlalchemy.util.compat, C:\Users\Jenne\Documents\GitHub\HospitalGenerator\HospitalGenerator\run.py
+missing module named _thread.RLock - imported by _thread, pkg_resources._vendor.pyparsing
+missing module named _thread.get_ident - imported by _thread, future.backports.misc, C:\Users\Jenne\Documents\GitHub\HospitalGenerator\HospitalGenerator\run.py
+missing module named reprlib.recursive_repr - imported by reprlib, future.backports.misc, C:\Users\Jenne\Documents\GitHub\HospitalGenerator\HospitalGenerator\run.py
+missing module named 'test.support' - imported by future.moves.test.support, C:\Users\Jenne\Documents\GitHub\HospitalGenerator\HospitalGenerator\run.py
+missing module named dbm - imported by future.standard_library, future.moves.dbm, whichdb, anydbm, future.moves.dbm.ndbm, C:\Users\Jenne\Documents\GitHub\HospitalGenerator\HospitalGenerator\run.py
+missing module named 'dbm.dumb' - imported by future.moves.dbm.dumb, C:\Users\Jenne\Documents\GitHub\HospitalGenerator\HospitalGenerator\run.py
+missing module named 'dbm.gnu' - imported by future.moves.dbm.gnu, C:\Users\Jenne\Documents\GitHub\HospitalGenerator\HospitalGenerator\run.py
+missing module named gdbm - imported by anydbm, future.moves.dbm.gnu, C:\Users\Jenne\Documents\GitHub\HospitalGenerator\HospitalGenerator\run.py
+missing module named 'dbm.ndbm' - imported by future.moves.dbm.ndbm, C:\Users\Jenne\Documents\GitHub\HospitalGenerator\HospitalGenerator\run.py
+missing module named "'six.moves.urllib'.parse" - imported by w3lib.url, scrapy.utils.url, scrapy.http.request.form, scrapy.http.response, scrapy.http.response.text, scrapy.utils.sitemap, scrapy.utils.request, scrapy.utils.httpobj, scrapy.extensions.feedexport, scrapy.core.downloader.handlers.http11, scrapy.core.downloader.webclient, scrapy.downloadermiddlewares.redirect, scrapy.downloadermiddlewares.httpproxy, scrapy.linkextractors, scrapy.linkextractors.lxmlhtml, C:\Users\Jenne\Documents\GitHub\HospitalGenerator\HospitalGenerator\run.py
+missing module named priority - imported by twisted.web._http2, C:\Users\Jenne\Documents\GitHub\HospitalGenerator\HospitalGenerator\run.py
+missing module named h2 - imported by twisted.web._http2, C:\Users\Jenne\Documents\GitHub\HospitalGenerator\HospitalGenerator\run.py
+missing module named 'h2.errors' - imported by twisted.web._http2, C:\Users\Jenne\Documents\GitHub\HospitalGenerator\HospitalGenerator\run.py
+missing module named 'h2.events' - imported by twisted.web._http2, C:\Users\Jenne\Documents\GitHub\HospitalGenerator\HospitalGenerator\run.py
+missing module named 'h2.exceptions' - imported by twisted.web._http2, C:\Users\Jenne\Documents\GitHub\HospitalGenerator\HospitalGenerator\run.py
+missing module named 'collections.abc' - imported by lxml.html, C:\Users\Jenne\Documents\GitHub\HospitalGenerator\HospitalGenerator\run.py
+missing module named 'urllib.request' - imported by lxml.html, scrapy.downloadermiddlewares.httpproxy, C:\Users\Jenne\Documents\GitHub\HospitalGenerator\HospitalGenerator\run.py
+missing module named "'six.moves.urllib'.request" - imported by w3lib.url, scrapy.downloadermiddlewares.httpproxy, C:\Users\Jenne\Documents\GitHub\HospitalGenerator\HospitalGenerator\run.py
+missing module named http.cookiejar - imported by http, twisted.python.compat, C:\Users\Jenne\Documents\GitHub\HospitalGenerator\HospitalGenerator\run.py
+missing module named grp - imported by shutil, tarfile, twisted.python.util, C:\Users\Jenne\Documents\GitHub\HospitalGenerator\HospitalGenerator\run.py
+missing module named gestalt - imported by platform, C:\Users\Jenne\Documents\GitHub\HospitalGenerator\HospitalGenerator\run.py
+missing module named java - imported by platform, C:\Users\Jenne\Documents\GitHub\HospitalGenerator\HospitalGenerator\run.py
+missing module named 'java.lang' - imported by platform, xml.sax._exceptions, C:\Users\Jenne\Documents\GitHub\HospitalGenerator\HospitalGenerator\run.py
+missing module named vms_lib - imported by platform, C:\Users\Jenne\Documents\GitHub\HospitalGenerator\HospitalGenerator\run.py
+missing module named Carbon - imported by plistlib, C:\Users\Jenne\Documents\GitHub\HospitalGenerator\HospitalGenerator\run.py
+missing module named 'Carbon.Files' - imported by plistlib, C:\Users\Jenne\Documents\GitHub\HospitalGenerator\HospitalGenerator\run.py
+missing module named 'Carbon.File' - imported by plistlib, C:\Users\Jenne\Documents\GitHub\HospitalGenerator\HospitalGenerator\run.py
+missing module named _xmlplus - imported by xml, C:\Users\Jenne\Documents\GitHub\HospitalGenerator\HospitalGenerator\run.py
+missing module named _imp - imported by pkg_resources, C:\Users\Jenne\Documents\GitHub\HospitalGenerator\HospitalGenerator\run.py
+missing module named pkg_resources.extern.six - imported by pkg_resources.extern, pkg_resources, C:\Users\Jenne\Documents\GitHub\HospitalGenerator\HospitalGenerator\run.py
+missing module named 'pkg_resources.extern.six.moves' - imported by pkg_resources, C:\Users\Jenne\Documents\GitHub\HospitalGenerator\HospitalGenerator\run.py, pkg_resources._vendor.packaging.requirements
+missing module named 'importlib.machinery' - imported by pkg_resources, C:\Users\Jenne\Documents\GitHub\HospitalGenerator\HospitalGenerator\run.py
+missing module named pkg_resources.extern.appdirs - imported by pkg_resources.extern, pkg_resources, C:\Users\Jenne\Documents\GitHub\HospitalGenerator\HospitalGenerator\run.py
+missing module named pkg_resources.extern.packaging - imported by pkg_resources.extern, pkg_resources, C:\Users\Jenne\Documents\GitHub\HospitalGenerator\HospitalGenerator\run.py
+missing module named _sysconfigdata - imported by distutils.sysconfig, sysconfig, C:\Users\Jenne\Documents\GitHub\HospitalGenerator\HospitalGenerator\run.py
+missing module named 'pkg_resources.extern.pyparsing' - imported by pkg_resources._vendor.packaging.requirements, pkg_resources._vendor.packaging.markers
+missing module named ordereddict - imported by pkg_resources._vendor.pyparsing
+missing module named 'com.sun' - imported by pkg_resources._vendor.appdirs
+runtime module named six.moves - imported by scrapy._monkeypatches, cryptography.x509.general_name, cryptography.hazmat.backends.openssl.decode_asn1, 'six.moves.urllib', scrapy.http.request.rpc, ConfigParser, scrapy.exporters, scrapy.utils.project, scrapy.mail, email.mime.multipart, email.mime.text, email.mime.base, scrapy.extensions.spiderstate, cookielib, scrapy.squeues, C:\Users\Jenne\Documents\GitHub\HospitalGenerator\HospitalGenerator\run.py
+missing module named 'cryptography.hazmat.bindings._commoncrypto' - imported by cryptography.hazmat.bindings.commoncrypto.binding, C:\Users\Jenne\Documents\GitHub\HospitalGenerator\HospitalGenerator\run.py
+missing module named _dummy_threading - imported by dummy_threading, C:\Users\Jenne\Documents\GitHub\HospitalGenerator\HospitalGenerator\run.py
+missing module named 'twisted.python._sendmsg' - imported by twisted.python.sendmsg, C:\Users\Jenne\Documents\GitHub\HospitalGenerator\HospitalGenerator\run.py
+missing module named sgi - imported by pty, C:\Users\Jenne\Documents\GitHub\HospitalGenerator\HospitalGenerator\run.py
+missing module named resource - imported by posix, twisted.internet.process, C:\Users\Jenne\Documents\GitHub\HospitalGenerator\HospitalGenerator\run.py
+missing module named os2 - imported by os, C:\Users\Jenne\Documents\GitHub\HospitalGenerator\HospitalGenerator\run.py
+missing module named _emx_link - imported by os, C:\Users\Jenne\Documents\GitHub\HospitalGenerator\HospitalGenerator\run.py
+missing module named ce - imported by os, C:\Users\Jenne\Documents\GitHub\HospitalGenerator\HospitalGenerator\run.py
+missing module named riscos - imported by os, C:\Users\Jenne\Documents\GitHub\HospitalGenerator\HospitalGenerator\run.py
+missing module named riscospath - imported by os, C:\Users\Jenne\Documents\GitHub\HospitalGenerator\HospitalGenerator\run.py
+missing module named riscosenviron - imported by os, C:\Users\Jenne\Documents\GitHub\HospitalGenerator\HospitalGenerator\run.py
+missing module named 'org.python' - imported by pickle, xml.sax, C:\Users\Jenne\Documents\GitHub\HospitalGenerator\HospitalGenerator\run.py
+missing module named rourl2path - imported by urllib, C:\Users\Jenne\Documents\GitHub\HospitalGenerator\HospitalGenerator\run.py
+missing module named fcntl - imported by tempfile, subprocess, twisted.internet.fdesc, pty, twisted.internet.process, C:\Users\Jenne\Documents\GitHub\HospitalGenerator\HospitalGenerator\run.py
+missing module named clr - imported by pyreadline.clipboard.ironpython_clipboard, pyreadline.console.ironpython_console, C:\Users\Jenne\Documents\GitHub\HospitalGenerator\HospitalGenerator\run.py
+missing module named IronPythonConsole - imported by pyreadline.console.ironpython_console, C:\Users\Jenne\Documents\GitHub\HospitalGenerator\HospitalGenerator\run.py
+missing module named System - imported by pyreadline.clipboard.ironpython_clipboard, pyreadline.keysyms.ironpython_keysyms, pyreadline.console.ironpython_console, pyreadline.rlmain, C:\Users\Jenne\Documents\GitHub\HospitalGenerator\HospitalGenerator\run.py
+missing module named startup - imported by pyreadline.keysyms.common, pyreadline.keysyms.keysyms, C:\Users\Jenne\Documents\GitHub\HospitalGenerator\HospitalGenerator\run.py
+missing module named console - imported by pyreadline.console.ansi, C:\Users\Jenne\Documents\GitHub\HospitalGenerator\HospitalGenerator\run.py
+missing module named org - imported by copy, C:\Users\Jenne\Documents\GitHub\HospitalGenerator\HospitalGenerator\run.py
+missing module named SOCKS - imported by ftplib, C:\Users\Jenne\Documents\GitHub\HospitalGenerator\HospitalGenerator\run.py
+missing module named termios - imported by getpass, tty, twisted.internet.process, C:\Users\Jenne\Documents\GitHub\HospitalGenerator\HospitalGenerator\run.py
+missing module named EasyDialogs - imported by getpass, C:\Users\Jenne\Documents\GitHub\HospitalGenerator\HospitalGenerator\run.py
+missing module named _scproxy - imported by urllib, future.backports.urllib.request, C:\Users\Jenne\Documents\GitHub\HospitalGenerator\HospitalGenerator\run.py
+missing module named pwd - imported by posixpath, getpass, shutil, tarfile, twisted.python.util, distutils.util, webbrowser, C:\Users\Jenne\Documents\GitHub\HospitalGenerator\HospitalGenerator\run.py
+missing module named configparser - imported by sqlalchemy.util.compat
+missing module named Sybase - imported by sqlalchemy.dialects.sybase.pysybase
+missing module named pysqlcipher3 - imported by sqlalchemy.dialects.sqlite.pysqlcipher
+missing module named pysqlcipher - imported by sqlalchemy.dialects.sqlite.pysqlcipher
+missing module named pgdb - imported by sqlalchemy.dialects.postgresql.pygresql
+missing module named postgresql - imported by sqlalchemy.dialects.postgresql.pypostgresql
+missing module named 'com.ziclix' - imported by sqlalchemy.dialects.postgresql.zxjdbc, sqlalchemy.dialects.oracle.zxjdbc
+missing module named com - imported by sqlalchemy.connectors.zxJDBC
+missing module named 'java.sql' - imported by sqlalchemy.dialects.oracle.zxjdbc
+missing module named 'mysql.connector' - imported by sqlalchemy.dialects.mysql.mysqlconnector
+missing module named mysql - imported by sqlalchemy.dialects.mysql.mysqlconnector
+missing module named 'google.storage' - imported by sqlalchemy.dialects.mysql.gaerdbms
+missing module named 'google.appengine' - imported by sqlalchemy.dialects.mysql.gaerdbms
+missing module named google - imported by sqlalchemy.dialects.mysql.gaerdbms
+missing module named 'mx.ODBC' - imported by sqlalchemy.connectors.mxodbc
+missing module named mx - imported by sqlalchemy.connectors.mxodbc
+missing module named psycopg2 - imported by sqlalchemy.dialects.postgresql.psycopg2, sqlalchemy
+missing module named pysqlite2 - imported by sqlalchemy.dialects.sqlite.pysqlite, sqlalchemy

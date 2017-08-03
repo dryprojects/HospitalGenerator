@@ -33,4 +33,7 @@ try:
     # 4.主进程启动（阻塞）
     process.start()
 except:
-    logging.error("未知异常，默认不处理")
+    import sys
+    import traceback
+    logging.error(u"\n%s[%s][%s]"%(sys.exc_info()[0], sys.exc_info()[1], sys.exc_info()[2]))
+    logging.error(u"\n%s", traceback.print_exc())

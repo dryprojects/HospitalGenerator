@@ -13,6 +13,11 @@ from datetime import datetime
 import re
 import MySQLdb.cursors
 
+import ConfigParser
+
+cp = ConfigParser.SafeConfigParser()
+cp.read('./settings.conf')
+
 class CleanedData(object):
     def clean_data(self, item, spider):
         """
@@ -132,14 +137,23 @@ class MySQLPipline(CleanedData):
 
     @classmethod
     def from_crawler(cls, crawler):
+        #dbparams = dict(
+        #    host = crawler.settings['MYSQL_HOST'],
+        #    db = crawler.settings['MYSQL_DBNAME'],
+        #    user = crawler.settings['MYSQL_USER'],
+        #    passwd = crawler.settings['MYSQL_PASSWORD'],
+        #    charset = 'gbk',
+        #    cursorclass = MySQLdb.cursors.DictCursor,
+        #    use_unicode = False
+        #)
         dbparams = dict(
-            host = crawler.settings['MYSQL_HOST'],
-            db = crawler.settings['MYSQL_DBNAME'],
-            user = crawler.settings['MYSQL_USER'],
-            passwd = crawler.settings['MYSQL_PASSWORD'],
-            charset = 'gbk',
-            cursorclass = MySQLdb.cursors.DictCursor,
-            use_unicode = False
+            host = cp.get('DB', 'MYSQL_HOST'),
+            db = cp.get('DB', 'MYSQL_DBNAME'),
+            user = cp.get('DB', 'MYSQL_USER'),
+            passwd = cp.get('DB', 'MYSQL_PASSWORD'),
+            charset='gbk',
+            cursorclass=MySQLdb.cursors.DictCursor,
+            use_unicode=False
         )
         dbpool = adbapi.ConnectionPool('MySQLdb', **dbparams)
         return cls(dbpool)

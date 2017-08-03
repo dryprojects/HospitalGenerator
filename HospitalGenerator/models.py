@@ -12,8 +12,13 @@ from sqlalchemy.orm import sessionmaker
 
 from sqlalchemy import Column, String, Integer
 from sqlalchemy.ext.declarative import declarative_base
+#如果用runGrmp启动则去掉下面注释
+#from scrapy.utils.project import get_project_settings as settings
+import ConfigParser
 
-from scrapy.utils.project import get_project_settings as settings
+cp = ConfigParser.SafeConfigParser()
+cp.read('./settings.conf')
+
 
 Base = declarative_base()
 
@@ -53,7 +58,9 @@ class Model(object):
         :param dialect:数据库连接字符串
         """
         if dialect is None:
-            dialect = 'mysql+mysqldb://'+settings()['MYSQL_USER']+':'+settings()['MYSQL_PASSWORD']+'@'+settings()['MYSQL_HOST']+'/?charset=gbk'
+            #如果用runGrmp启动则去掉下面注释
+            #dialect = 'mysql+mysqldb://'+settings()['MYSQL_USER']+':'+settings()['MYSQL_PASSWORD']+'@'+settings()['MYSQL_HOST']+'/?charset=gbk'
+            dialect = 'mysql+mysqldb://'+cp.get('DB', 'MYSQL_USER')+':'+cp.get('DB', 'MYSQL_PASSWORD')+'@'+cp.get('DB', 'MYSQL_HOST')+'/?charset=gbk'
 
         self.engine = create_engine(dialect, encoding=encoding, echo=echo)
         DB_Session = sessionmaker(bind=self.engine)
@@ -80,7 +87,7 @@ class HospitalModel(Model):
             extract_from = '',
             loop_css = '.pageC',
             key_words = r'(\xd5\xd0\xb1\xea)',
-            postTime_pattern = r'(\d{1,4}-\d{1,2}-\d{1,2}\s\d{1,2}:\d{1,2})',
+            postTime_pattern = r'(\d{1,4}-\d{1,2}-\d{1,2})',
             msgTitle_css = 'title::text',
             postTime_css = '.artinfo::text',
             msgDesc_css = '.arttitle h1::text',
@@ -688,6 +695,25 @@ class HospitalModel(Model):
             msgFrom=u'西安医学院',
             enable=1
         )
+        ccgp = Rules(
+            name='ccgp',
+            allow_domains='ccgp-shaanxi.gov.cn',
+            start_urls='http://www.ccgp-shaanxi.gov.cn/cggg.jsp',
+            allow_url=r'.*',
+            next_page='',
+            base_url='http://www.ccgp-shaanxi.gov.cn',
+            extract_from='',
+            loop_css='table tr:nth-child(2) td:nth-child(2) table:nth-child(1) tr:nth-child(2) table tr',
+            key_words=r'(\xb2\xc9\xb9\xba|\xb9\xab\xb8\xe6|\xb9\xab\xca\xbe|\xd5\xd0\xb1\xea|\xe5\xe0\xd1\xa1)',
+            postTime_pattern=r'(\d{1,4}-\d{1,2}-\d{1,2})',
+            msgTitle_css='title::text',
+            msgLink_css='a::attr(href)',
+            postTime_css='td:nth-child(3)::text',
+            msgDesc_css='a::text',
+            msgFrom=u'陕西政府采购',
+            enable=1
+        )
+        self.session.add(ccgp)
         self.session.add(xiyi)
         self.session.add(xdjtyy)
         self.session.add(akzxyy)
